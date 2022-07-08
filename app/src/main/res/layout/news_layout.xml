@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/textView_titleItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="News Title"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            style="@style/TextViewNewsTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewLogo" />
+
+        <TextView
+            android:id="@+id/textView_labelAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textView_author"
+            style="@style/TextViewNewsLabelAuthor"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_titleItem" />
+
+        <TextView
+            android:id="@+id/textView_authorItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextViewNewsAuthor"
+            android:layout_marginStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/textView_labelAuthor"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_labelAuthor"
+            app:layout_constraintStart_toEndOf="@id/textView_labelAuthor"
+            app:layout_constraintTop_toBottomOf="@id/textView_titleItem"
+            tools:text="Apple" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
