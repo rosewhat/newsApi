@@ -3,12 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
 
 
         <ImageView
@@ -23,36 +27,36 @@
 
         <TextView
             android:id="@+id/textView_titleItem"
+            style="@style/TextViewNewsTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="News Title"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            style="@style/TextViewNewsTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageViewLogo" />
+            app:layout_constraintTop_toBottomOf="@id/imageViewLogo"
+            tools:text="News Title" />
 
         <TextView
             android:id="@+id/textView_labelAuthor"
+            style="@style/TextViewNewsLabelAuthor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/textView_author"
-            style="@style/TextViewNewsLabelAuthor"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:text="@string/textView_author"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textView_titleItem" />
 
         <TextView
             android:id="@+id/textView_authorItem"
+            style="@style/TextViewNewsAuthor"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/TextViewNewsAuthor"
             android:layout_marginStart="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBaseline_toBaselineOf="@id/textView_labelAuthor"
             app:layout_constraintBottom_toBottomOf="@+id/textView_labelAuthor"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/textView_labelAuthor"
             app:layout_constraintTop_toBottomOf="@id/textView_titleItem"
             tools:text="Apple" />

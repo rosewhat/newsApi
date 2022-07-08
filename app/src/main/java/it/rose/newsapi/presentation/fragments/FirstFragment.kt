@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
-import it.rose.newsapi.R
 import it.rose.newsapi.databinding.FragmentFirstBinding
 import it.rose.newsapi.domain.NewsViewModel
 import it.rose.newsapi.presentation.adapters.NewsAdapter
@@ -22,7 +21,6 @@ class FirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         binding = FragmentFirstBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -31,8 +29,8 @@ class FirstFragment : Fragment() {
 
         super.onViewCreated(view, savedInstanceState)
         val viewModel = ViewModelProvider(this)[NewsViewModel::class.java]
-        recyclerView = binding.recyclerView
-        adapter = NewsAdapter()
+        recyclerView = binding.recyclerViewNews
+        adapter = NewsAdapter(this)
         recyclerView.adapter = adapter
         viewModel.getNewsModel()
         viewModel.newsModelList.observe(viewLifecycleOwner, { list ->
